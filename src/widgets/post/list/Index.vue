@@ -27,7 +27,9 @@ export default class Comp extends Vue {
   margin: auto;
 
   .one {
-    margin-bottom: 20px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
   }
 }
 </style>

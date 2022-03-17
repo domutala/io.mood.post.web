@@ -95,7 +95,7 @@ export default class Comp extends Vue {
   loading = true;
 
   mounted() {
-    setTimeout(this.init, 2000);
+    setTimeout(this.init, 4000);
   }
 
   async init() {
@@ -108,7 +108,7 @@ export default class Comp extends Vue {
 .w_post_one {
   border-radius: 0.6em;
   overflow: hidden;
-  box-shadow: rgba(var(--dark), 0.1) 0px 0px 0px 1px;
+  // box-shadow: rgba(var(--dark), 0.1) 0px 0px 0px 1px;
   transition: all 0.5s ease;
   cursor: pointer;
 
@@ -243,7 +243,7 @@ export default class Comp extends Vue {
           height: 13px;
           width: 120px;
           border-radius: 16em;
-          background-color: rgba(var(--dark), 0.05);
+          background-color: rgba(var(--dark), 0.1);
           position: relative;
 
           &:not(:last-child) {
@@ -267,7 +267,7 @@ export default class Comp extends Vue {
 
       .poster {
         height: 200px;
-        background-color: rgba(var(--dark), 0.05);
+        background-color: rgba(var(--dark), 0.1);
         position: relative;
         margin: 10px;
         border-radius: 0.6em;
