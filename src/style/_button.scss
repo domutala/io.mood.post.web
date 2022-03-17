@@ -9,15 +9,16 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
+  line-height: 1;
 
   i {
     opacity: 0.5;
     color: rgba(var(--primary), 1);
   }
 
-  * {
+  > * {
     &:not(:first-child) {
-      margin-left: 2.5px;
+      margin-left: 5px;
     }
   }
 

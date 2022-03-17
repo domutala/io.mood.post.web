@@ -3,6 +3,7 @@ import App from "./App.vue";
 import moment from "moment";
 
 import store from "./store";
+import router from "./router";
 
 import style from "./style";
 import component from "./components";
@@ -26,7 +27,7 @@ moment.locale("fr");
 Vue.config.productionTip = false;
 
 Vue.prototype.$app = {
-  name: "Picreact",
+  name: "posticle",
   logo: {
     svg: `<svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 229.000000 224.000000" preserveAspectRatio="xMidYMid meet">
 
@@ -48,5 +49,6 @@ Vue.use(utils);
 
 new Vue({
   store,
+  router,
   render: (h) => h(App),
 }).$mount("#app");

@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ name: 'post' }" class="w_post_one">
+  <div class="w_post_one">
     <div v-if="loading" class="loader">
       <div class="h">
         <div class="left">
@@ -20,13 +20,14 @@
       </div>
 
       <div class="b">
+        <div class="poster">
+          <div class="_e-loader"></div>
+        </div>
+
         <div class="text">
           <div><div class="_e-loader"></div></div>
           <div><div class="_e-loader"></div></div>
           <div><div class="_e-loader"></div></div>
-        </div>
-        <div class="poster">
-          <div class="_e-loader"></div>
         </div>
       </div>
     </div>
@@ -47,18 +48,26 @@
         <div class="right">
           <div class="opts">
             <button class="btn">
+              <div style="font-size: 60%">partager</div>
               <i class="fi fi-sr-paper-plane"></i>
+            </button>
+            <button class="btn">
+              <div style="font-size: 60%">15</div>
+              <i class="fi fi-sr-comment"></i>
             </button>
             <button class="btn shine">
               <div style="font-size: 60%">14</div>
               <i class="fi fi-sr-thumbs-up"></i>
-              <!-- <span class="spin">1k</span> -->
             </button>
           </div>
         </div>
       </div>
 
       <div class="b">
+        <div class="poster">
+          <img src="/img/01.jpg" alt="" />
+        </div>
+
         <div class="text">
           <div class="title">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
@@ -68,32 +77,27 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
             labore delectus harum ducimus aperiam distinctio minima, maiores
             repudiandae eligendi, temporibus, recusandae sunt tempore ab rem!
-            Explicabo quae voluptates corporis aperiam...
-          </div>
-        </div>
-        <div class="poster">
-          <img src="/img/01.jpg" alt="" />
-        </div>
-      </div>
-
-      <div class="f">
-        <div>
-          <div class="place">Commenter</div>
-        </div>
-        <div>
-          <!-- <div>
-          <i class="fi fi-sr-comment"></i>
-        </div> -->
-          <div>
-            <button class="btn shine shade">
-              <div style="font-size: 60%">15</div>
-              <i class="fi fi-sr-comment"></i>
-            </button>
+            Explicabo quae voluptates corporis aperiam... Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Possimus cupiditate eveniet culpa
+            ratione, in facere repudiandae quas voluptas necessitatibus eius
+            numquam ut tenetur error temporibus doloribus soluta ipsum, impedit
+            dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Possimus cupiditate eveniet culpa ratione, in facere repudiandae
+            quas voluptas necessitatibus eius numquam ut tenetur error
+            temporibus doloribus soluta ipsum, impedit dolores. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Possimus cupiditate
+            eveniet culpa ratione, in facere repudiandae quas voluptas
+            necessitatibus eius numquam ut tenetur error temporibus doloribus
+            soluta ipsum, impedit dolores. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Possimus cupiditate eveniet culpa
+            ratione, in facere repudiandae quas voluptas necessitatibus eius
+            numquam ut tenetur error temporibus doloribus soluta ipsum, impedit
+            dolores.
           </div>
         </div>
       </div>
     </div>
-  </router-link>
+  </div>
 </template>
 
 <script lang="ts">
@@ -115,13 +119,10 @@ export default class Comp extends Vue {
 
 <style lang="scss" scoped>
 .w_post_one {
-  border-radius: 0.6em;
   overflow: hidden;
-  // box-shadow: rgba(var(--dark), 0.1) 0px 0px 0px 1px;
   transition: all 0.5s ease;
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
+  max-width: 600px;
+  margin: auto;
 
   .h {
     padding: 20px;
@@ -196,37 +197,6 @@ export default class Comp extends Vue {
         display: block;
       }
     }
-  }
-
-  .f {
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    margin-bottom: 10px;
-    // display: none;
-
-    > div:first-child {
-      width: 100%;
-      height: 28px;
-      background-color: rgba(var(--dark), 0.05);
-      border-radius: 16em;
-      cursor: text;
-      display: flex;
-      align-items: center;
-
-      .place {
-        opacity: 0.5;
-        margin-left: 10px;
-      }
-    }
-
-    > div:last-child {
-      margin-left: 5px;
-    }
-  }
-
-  &:hover {
-    box-shadow: rgba(var(--dark), 0.1) 0px 10px 50px;
   }
 
   .loader {

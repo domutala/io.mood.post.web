@@ -22,13 +22,21 @@ export default class Comp extends Vue {
 
 <style lang="scss" scoped>
 .w_post_list {
-  padding: 30px;
+  padding: 0px;
   max-width: 500px;
-  margin: auto;
+  margin: 20px auto;
 
   .one {
     &:not(:last-child) {
       margin-bottom: 50px;
+    }
+
+    @media (max-width: 500px) {
+      margin-bottom: 0 !important;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(var(--dark), 0.1);
+      }
     }
   }
 }
