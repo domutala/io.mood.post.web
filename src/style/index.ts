@@ -23,7 +23,7 @@ const plug: PluginObject<Vue> = {
       const colors: { [key: string]: string } = {
         primary: ["218, 42, 42", "255, 215, 0", "0, 0, 0"][2],
         danger: "230, 60, 60",
-        success: "23, 201, 100",
+        success: ["23, 201, 100", "44, 135, 44"][1],
 
         white: "255, 255, 255",
         black: "0, 0, 0",

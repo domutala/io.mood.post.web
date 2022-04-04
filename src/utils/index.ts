@@ -3,6 +3,7 @@ import datetime from "./datetime";
 import number_ from "./number";
 import phone from "./phone";
 import regex from "./regex";
+import rsa from "./rsa";
 
 const plug: PluginObject<Vue> = {
   install: (vue) => {
@@ -11,6 +12,7 @@ const plug: PluginObject<Vue> = {
       number: number_,
       phone,
       regex,
+      rsa,
     };
   },
 };

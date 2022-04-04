@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <div class="head"></div>
+  <div>
     <div class="body">
       <w-post-list />
     </div>
@@ -31,40 +30,10 @@ export default class Comp extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.head {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 69px;
-  height: 100%;
-  border-right: 1px solid rgba(var(--dark), 0.1);
-  background-color: rgba(var(--light), 1);
-
-  @media (max-width: 992px) {
-    width: 100%;
-    height: 69px;
-    border: 0;
-    border-top: 1px solid rgba(var(--dark), 0.1);
-    top: unset;
-    bottom: 0;
-    z-index: 500;
-  }
-}
 .body {
-  position: absolute;
-  top: 0;
-  left: 70px;
-  width: calc(100% - 420px);
-
-  @media (max-width: 992px) {
-    top: 0;
-    left: 0;
-    width: calc(100% - 350px);
-    padding-bottom: 60px;
-  }
-
+  background-color: red;
   @media (max-width: 772px) {
-    width: 100%;
+    width: calc(100% - 350px);
   }
 }
 .foot {

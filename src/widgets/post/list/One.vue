@@ -117,11 +117,12 @@ export default class Comp extends Vue {
 .w_post_one {
   border-radius: 0.6em;
   overflow: hidden;
-  // box-shadow: rgba(var(--dark), 0.1) 0px 0px 0px 1px;
+  box-shadow: rgba(var(--dark), 0.1) 0px 0px 0px 1px;
   transition: all 0.5s ease;
   cursor: pointer;
   display: block;
   text-decoration: none;
+  background-color: rgba(var(--light), 1);
 
   .h {
     padding: 20px;

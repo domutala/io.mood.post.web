@@ -1,4 +1,3 @@
-import { IContact } from "@/store/types/Contact";
 import { AxiosRequestConfig, AxiosInstance } from "axios";
 import { Analytics } from "firebase/analytics";
 import { FirebaseApp } from "firebase/app";
@@ -10,6 +9,7 @@ declare module "vue/types/vue" {
       name: string;
       shortNam: string;
       logo: {
+        // eslint-disable-next-line @typescript-eslint/ban-types
         svg: {};
         img: string;
       };
@@ -70,6 +70,26 @@ declare module "vue/types/vue" {
       regex: {
         mail: (mail: string) => boolean;
         url: (url: string) => boolean;
+        name: (name: string) => boolean;
+        password: (password: string) => boolean;
+      };
+
+      rsa: {
+        generate: () => { public: string; private: string };
+        encrypt: ({
+          key,
+          data,
+        }: {
+          key: string;
+          data: string | number[];
+        }) => string;
+        decrypt: ({
+          key,
+          data,
+        }: {
+          key: string;
+          data: string | number[];
+        }) => string;
       };
     };
   }

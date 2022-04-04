@@ -167,5 +167,9 @@ export default class Comp extends Vue {
       border-color: rgba(var(--success), 1);
     }
   }
+
+  + .m-input {
+    margin-top: 15px;
+  }
 }
 </style>
